@@ -1,0 +1,8 @@
+对于添加到负载均衡实例后端的ECS，原则上不需要进行特别的配置。如果针对关联到负载均衡4层（TCP协议）服务的Linux系统的ECS，如果发现无法正常访问，需要确保系统配置文件/etc/sysctl.conf的以下三项为0：
+net.ipv4.conf.default.rp_filter = 0
+net.ipv4.conf.all.rp_filter = 0
+net.ipv4.conf.eth0.rp_filter = 0
+
+如果部署在同一内网网段下的ECS之间有通信需求，且发现有无法通信的情况存在，那么需要检查如下参数的配置是否正确：
+net.ipv4.conf.default.arp_announce =2
+net.ipv4.conf.all.arp_announce =2
