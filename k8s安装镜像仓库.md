@@ -39,4 +39,5 @@ hostname: 10.41.61.180
 
 7.访问WEB界面
 http://106.75.231.209:18080/harbor/projects
+ admin 123456
 
