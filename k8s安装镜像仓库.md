@@ -38,5 +38,5 @@ hostname: 10.41.61.180
 ./install.sh
 
 7.访问WEB界面
-http://152.32.164.52/harbor/projects
+http://106.75.231.209:18080/harbor/projects
 
