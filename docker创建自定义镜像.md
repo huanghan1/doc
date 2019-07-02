@@ -18,6 +18,15 @@ rabbitmq 启动
   
 9.docker run  -itd --privileged -p 20010:22 --name="centos"  9f38484d220f   /usr/sbin/init
 
+10.cat Dockerfile
+  FROM 172.16.11.9:18080/common/jdk8_tomcat8:v2
+  MAINTAINER huanghan@xiaoniu.com
+  ENV HOSTNAME voice-qyanalysisapi-01
+  EXPOSE 8080
+  RUN mkdir /data/qyanalysisapi/logs -pv
+  RUN mkdir /home/wls81/tomcat/qyanalysisapi/ && chown -R wls81.wls81 /home/wls81/tomcat/qyanalysisapi/
+  COPY qyanalysisapi.jar  /home/wls81/tomcat/qyanalysisapi/
+  RUN source /etc/profile 
 
-10.docker buile -t qyanalysisapi:v1 .
+11. docker build -t qyanalysisapi:v2 .
 
