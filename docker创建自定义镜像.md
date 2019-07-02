@@ -1,3 +1,9 @@
+
+yum -y install docker 
+cat /etc/docker/daemon.json 
+{ "insecure-registries":["172.16.11.9:18080","172.16.0.175:18080"] }
+
+
 1.docker search nginx
 2.docker login -u admin -p admin_123 http://172.16.0.175:18080
 3.docker run --name nginx -p 80:80 -d docker.io/nginx  
