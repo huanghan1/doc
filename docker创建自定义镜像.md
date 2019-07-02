@@ -4,3 +4,7 @@
 4.docker commit -m "update config" -a "huanghan@xiaoniu.com" 06ffe3940be9 nginx:v1
 5.docker tag nginx:v1 172.16.0.175:18080/common/nginx:v1
 6.docker push 172.16.0.175:18080/common/nginx:v1
+rabbitmq 启动
+7.docker run -d --hostname rabbitmq --name rabbitmq -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin -p 15672:15672 -p 5672:5672 rabbitmq:management
+8.查看镜像修改详情
+  docker inspect rabbitmq:v1 
