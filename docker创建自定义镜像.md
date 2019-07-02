@@ -18,3 +18,6 @@ rabbitmq 启动
   
 9.docker run  -itd --privileged -p 20010:22 --name="centos"  9f38484d220f   /usr/sbin/init
 
+
+10.docker buile -t qyanalysisapi:v1 .
+
