@@ -28,5 +28,7 @@ rabbitmq 启动
   COPY qyanalysisapi.jar  /home/wls81/tomcat/qyanalysisapi/
   RUN source /etc/profile 
 
-11. docker build -t qyanalysisapi:v2 .
+11.docker build -t qyanalysisapi:v2 .
 
+12. Dockfile 实践
+    https://www.cnblogs.com/jsonhc/p/7767669.html 
