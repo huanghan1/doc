@@ -14,3 +14,7 @@ rabbitmq 启动
 7.docker run -d --hostname rabbitmq --name rabbitmq -e RABBITMQ_DEFAULT_USER=admin -e RABBITMQ_DEFAULT_PASS=admin -p 15672:15672 -p 5672:5672 rabbitmq:management
 8.查看镜像修改详情
   docker inspect rabbitmq:v1 
+  
+  
+9.docker run  -itd --privileged -p 20010:22 --name="centos"  9f38484d220f   /usr/sbin/init
+
