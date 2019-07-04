@@ -14,10 +14,16 @@ yum -y install docker-ce-17.06.2.ce-1.el7.centos.x86_64.rpm
 
 
 Harbor简单部署
+
 1.安装docker-compose
+
 yum install python-pip;pip install docker-compose
+
 2.下载Harbor离线包
+
 https://github.com/vmware/harbor/releases
+
+https://storage.googleapis.com/harbor-releases/release-1.8.0/harbor-online-installer-v1.8.1.tgz
 
 3.解压，进入安装包
 tar -xvf harbor-online-installer-v1.1.1.tgz ; cd harbor
