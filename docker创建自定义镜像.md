@@ -3,7 +3,23 @@ yum -y install docker
 
 cat /etc/docker/daemon.json 
 
-{ "insecure-registries":["172.16.11.9:18080","172.16.0.175:18080"] }
+{ 
+ "insecure-registries":[
+    "172.16.11.9:18080",
+    "172.16.0.175:18080",
+    "https://docker.mirrors.ustc.edu.cn",
+    "https://dockerhub.azk8s.cn",
+    "http://hub-mirror.c.163.com"
+    ],
+   "max-concurrent-downloads": 10,
+   "log-driver": "json-file",
+   "log-level": "warn",
+   "log-opts": {
+   "max-size": "10m",
+   "max-file": "3"
+   },
+   "data-root": "/var/lib/docker"
+}
 
 
 其中172.16.11.9:18080和172.16.0.175:18080 是仓库地址
