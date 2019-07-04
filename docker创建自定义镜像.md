@@ -2,6 +2,7 @@
 yum -y install docker 
 
 cat /etc/docker/daemon.json 
+
 { "insecure-registries":["172.16.11.9:18080","172.16.0.175:18080"] }
 
 
@@ -14,12 +15,15 @@ cat /etc/docker/daemon.json
 3.docker run --name nginx -p 80:80 -d docker.io/nginx  
 
 创建自定义镜像
+
 4.docker commit -m "update config" -a "huanghan@xiaoniu.com" 06ffe3940be9 nginx:v1
 
 把新建的仓库，打标签
+
 5.docker tag nginx:v1 172.16.0.175:18080/common/nginx:v1
 
 上传镜像到私有仓库里
+
 6.docker push 172.16.0.175:18080/common/nginx:v1
 
 
@@ -31,13 +35,16 @@ rabbitmq 启动，授权用户名和密码
 
 
 8.查看镜像修改详情
-  docker inspect rabbitmq:v1 
+
+ docker inspect rabbitmq:v1 
   
 启动docker镜像 -p 指定端口  -d 镜像ID  
+
 9.docker run  -itd --privileged -p 20010:22 --name="centos"  9f38484d220f   /usr/sbin/init
 
 
 自定义Dockerfile
+
 10.cat Dockerfile
   FROM 172.16.11.9:18080/common/jdk8_tomcat8:v2
   MAINTAINER huanghan@xiaoniu.com
@@ -49,6 +56,7 @@ rabbitmq 启动，授权用户名和密码
   RUN source /etc/profile 
 
 已Dockerfile 创建自定义 镜像
+
 11.docker build -t qyanalysisapi:v2 .
 
 创建Dockerfile 例子
