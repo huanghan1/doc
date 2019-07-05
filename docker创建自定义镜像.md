@@ -84,3 +84,7 @@ rabbitmq 启动，授权用户名和密码
     https://www.cnblogs.com/jsonhc/p/7767669.html 
 
 
+
+13.脚本创建仓库
+   
+    https://www.cnblogs.com/guigujun/p/8352983.html
