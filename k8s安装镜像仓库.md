@@ -43,6 +43,7 @@ hostname: 10.41.61.180
 
 7.重启
    docker-compose down -v
+   
    docker-compose up -d
 
 
