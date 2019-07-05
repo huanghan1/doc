@@ -24,6 +24,8 @@ cat /etc/docker/daemon.json
 
 其中172.16.11.9:18080和172.16.0.175:18080 是仓库地址
 
+docker run -it -d --name ubuntu_test -p 8088:80 ubuntu
+
 1.docker search nginx
 
 2.docker login -u admin -p admin_123 http://172.16.0.175:18080
