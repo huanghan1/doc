@@ -41,6 +41,11 @@ hostname: 10.41.61.180
 6.启动
 ./install.sh --with-clair  --with-chartmuseum 增加扫描功能
 
+7.重启
+   docker-compose down -v
+   docker-compose up -d
+
+
 7.访问WEB界面
 http://106.75.231.209:18080/harbor/projects
  admin 123456
