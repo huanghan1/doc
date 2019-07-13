@@ -92,4 +92,5 @@ rabbitmq 启动，授权用户名和密码
 14.docker 启动默认centos 系统 
  
  docker run -it  --name  centos -d 9f38484d220f  /bin/bash
+ docker run  -itd  --name="centos"  9f38484d220f   /usr/sbin/init
 
