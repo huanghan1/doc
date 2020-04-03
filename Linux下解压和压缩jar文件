@@ -1,0 +1,5 @@
+# 解压
+jar -xvf hello.jar
+
+# 压缩
+jar -cvf0m hello.jar ./META-INF/MANIFEST.MF .
